@@ -1,0 +1,93 @@
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    /* I recommend adding font-family: sans-serif; to the body{} style rule for a sleeker font*/
+  }
+  
+  .outer-container {
+    box-sizing: border-box ;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } 
+  .items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    justify-content: space-between;
+}
+.item {
+    list-style-type: none;
+    padding: 10px 0px;
+    display: list-item;
+    box-sizing: border-box;
+}
+.item-name {
+    font-size: 1.4em;
+    margin: 0px;
+    font-weight: bold;
+    color: teal;
+    text-shadow: -1px 1px #c2c2c2;
+}
+.item-level {
+    margin: 0px;
+    font-variant: small-caps;
+}
+.section-title {   
+    color: darkcyan;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: darkcyan 2px solid;
+}
+.resume-link {
+    display: block;
+    background: rgb(226, 226, 226); /* Color of button: Change this to a color you like */
+    padding: 20px 30px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0px 4px 5px 0px lightgray;
+    margin: 25px auto;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: rgb(50,50,50); /* Font color: Change this to a color you like */
+}
+.resume-link:hover {
+    box-shadow: 0px 4px 5px 0px darkgray;
+}
+  /*Style rules not in a media query can go here, above the media queries*/
+  
+  @media only screen and (max-width: 600px) {   /* For viewports smaller than 600px */
+      .outer-container {
+          width: 95%;
+          justify-content: center;
+      }
+      .item {
+        width: 100%;
+    }
+    .resume-link {
+        width: 100%;
+    }
+
+  }
+  
+  @media only screen and (min-width: 601px) {   /* For viewports 600px wide or larger */
+      .outer-container {
+          width: 80%;
+          justify-content: center;
+      }
+      .item {
+        width: 48%;
+    }
+  }
+  
+  @media only screen and (min-width: 1000px) {   /* For viewports 1000px wide or larger */
+      .outer-container {
+          width: 60%;
+          justify-content: center;
+      }
+  }
